@@ -11,6 +11,6 @@ LABEL com.github.actions.color="blue"
 
 RUN apk add --update curl && rm -rf /var/cache/apk/*
 
-COPY "entrypoint.sh" "/entrypoint.sh"
+COPY "vk_notification.sh" "/vk_notification.sh"
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/vk_notification.sh"]
