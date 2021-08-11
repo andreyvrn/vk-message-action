@@ -11,8 +11,8 @@ LABEL com.github.actions.color="blue"
 
 RUN apk add --update curl && rm -rf /var/cache/apk/*
 
-RUN chmod +x vk_notification.sh
-
 COPY "vk_notification.sh" "/vk_notification.sh"
 
 ENTRYPOINT ["/vk_notification.sh"]
+
+RUN chmod +x vk_notification.sh
