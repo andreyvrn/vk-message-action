@@ -1,0 +1,19 @@
+name: 'VK Notifications'
+description: 'VK Notification for GitHub Actions'
+inputs:
+  VK_TOKEN:
+    description: 'VK_TOKEN'
+    required: true
+  VK_PEER_ID:
+    description: 'VK_PEER_ID'
+    required: true
+  VK_MESSAGE:
+    description: 'VK_MESSAGE'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.VK_TOKEN }}
+    - ${{ inputs.VK_PEER_ID }}
+    - ${{ inputs.VK_MESSAGE }}
