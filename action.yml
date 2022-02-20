@@ -11,6 +11,7 @@ inputs:
     description: 'VK_MESSAGE'
     required: true
 runs:
+  runs-on: ubuntu-latest
   using: 'docker'
   image: 'Dockerfile'
   args:
